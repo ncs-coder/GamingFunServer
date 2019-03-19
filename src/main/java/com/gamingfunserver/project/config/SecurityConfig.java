@@ -3,6 +3,7 @@ package com.gamingfunserver.project.config;
 import com.gamingfunserver.project.security.CustomUserDetailsService;
 import com.gamingfunserver.project.security.JwtAuthenticationEntryPoint;
 import com.gamingfunserver.project.security.JwtAuthenticationFilter;
+import com.gamingfunserver.project.util.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -83,7 +84,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/api/auth/**")
                 .permitAll()
-                .antMatchers("/api/user/checkUsernameAvailability", "/api/user/checkEmailAvailability")
+                .antMatchers(AppConstants.URL_OPEN_ENDPOINTS)
                 .permitAll()
                 .antMatchers(HttpMethod.GET, "/api/polls/**", "/api/users/**")
                 .permitAll()
