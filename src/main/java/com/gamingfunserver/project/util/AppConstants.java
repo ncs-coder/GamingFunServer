@@ -5,4 +5,11 @@ public interface AppConstants {
     String DEFAULT_PAGE_SIZE = "30";
 
     int MAX_PAGE_SIZE = 50;
+
+    String [] URL_OPEN_ENDPOINTS = new String[]{
+            "/api/user/checkUsernameAvailability",
+            "/api/user/checkEmailAvailability",
+            "/roles"
+
+    };
 }
