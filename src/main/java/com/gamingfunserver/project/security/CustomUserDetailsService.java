@@ -1,6 +1,6 @@
 package com.gamingfunserver.project.security;
 
-import com.gamingfunserver.project.model.User;
+import com.gamingfunserver.project.model.user.User;
 import com.gamingfunserver.project.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

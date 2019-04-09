@@ -1,12 +1,13 @@
 package com.gamingfunserver.project.controller;
 
 import com.gamingfunserver.project.exception.ResourceNotFoundException;
-import com.gamingfunserver.project.model.User;
-import com.gamingfunserver.project.payload.*;
+import com.gamingfunserver.project.model.user.User;
+import com.gamingfunserver.project.payload.user.UserIdentityAvailability;
+import com.gamingfunserver.project.payload.user.UserProfile;
+import com.gamingfunserver.project.payload.user.UserSummary;
 import com.gamingfunserver.project.repository.UserRepository;
 import com.gamingfunserver.project.security.UserPrincipal;
 import com.gamingfunserver.project.security.CurrentUser;
-import com.gamingfunserver.project.util.AppConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @GetMapping("/user/me")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('ROLE_USER')")
     public UserSummary getCurrentUser(@CurrentUser UserPrincipal currentUser) {
         UserSummary userSummary = new UserSummary(currentUser.getId(), currentUser.getUsername(), currentUser.getName());
         return userSummary;

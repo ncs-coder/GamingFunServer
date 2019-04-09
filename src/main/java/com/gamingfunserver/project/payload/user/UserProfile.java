@@ -1,14 +1,21 @@
-package com.gamingfunserver.project.payload;
+package com.gamingfunserver.project.payload.user;
 
-public class UserSummary {
+import java.time.Instant;
+
+public class UserProfile {
     private Long id;
     private String username;
     private String name;
+    private Instant joinedAt;
+    private Long pollCount;
+    private Long voteCount;
 
-    public UserSummary(Long id, String username, String name) {
+    public UserProfile(Long id, String username, String name, Instant joinedAt) {
         this.id = id;
         this.username = username;
         this.name = name;
+        this.joinedAt = joinedAt;
+
     }
 
     public Long getId() {
@@ -34,4 +41,15 @@ public class UserSummary {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Instant getJoinedAt() {
+        return joinedAt;
+    }
+
+    public void setJoinedAt(Instant joinedAt) {
+        this.joinedAt = joinedAt;
+    }
+
+
+
 }

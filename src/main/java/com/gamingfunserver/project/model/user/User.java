@@ -1,7 +1,8 @@
-package com.gamingfunserver.project.model;
+package com.gamingfunserver.project.model.user;
 
 
 import com.gamingfunserver.project.model.audit.DateAudit;
+import com.gamingfunserver.project.model.user.Role;
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
 import javax.validation.constraints.Email;

@@ -1,4 +1,4 @@
-package com.gamingfunserver.project.payload;
+package com.gamingfunserver.project.payload.user;
 
 import javax.validation.constraints.*;
 
