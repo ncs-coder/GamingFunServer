@@ -1,4 +1,4 @@
-package com.gamingfunserver.project.payload;
+package com.gamingfunserver.project.payload.user;
 
 public class UserIdentityAvailability {
     private Boolean available;

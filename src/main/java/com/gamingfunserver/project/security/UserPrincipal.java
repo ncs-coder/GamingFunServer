@@ -1,5 +1,5 @@
 package com.gamingfunserver.project.security;
-import com.gamingfunserver.project.model.User;
+import com.gamingfunserver.project.model.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

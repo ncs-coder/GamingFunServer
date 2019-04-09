@@ -1,13 +1,12 @@
 package com.gamingfunserver.project.controller;
 
 import com.gamingfunserver.project.exception.AppException;
-import com.gamingfunserver.project.model.Role;
-import com.gamingfunserver.project.model.RoleName;
-import com.gamingfunserver.project.model.User;
+import com.gamingfunserver.project.model.user.Role;
+import com.gamingfunserver.project.model.user.RoleName;
+import com.gamingfunserver.project.model.user.User;
 import com.gamingfunserver.project.payload.ApiResponse;
 import com.gamingfunserver.project.payload.JwtAuthenticationResponse;
-import com.gamingfunserver.project.payload.LoginRequest;
-import com.gamingfunserver.project.payload.SignUpRequest;
+import com.gamingfunserver.project.payload.user.SignUpRequest;
 import com.gamingfunserver.project.repository.RoleRepository;
 import com.gamingfunserver.project.repository.UserRepository;
 import com.gamingfunserver.project.security.JwtTokenProvider;
@@ -49,7 +48,7 @@ public class AuthController {
     JwtTokenProvider tokenProvider;
 
     @PostMapping("/signin")
-    public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<?> authenticateUser(@Valid @RequestBody ApiResponse.LoginRequest loginRequest) {
 
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(

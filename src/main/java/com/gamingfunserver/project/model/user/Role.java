@@ -1,4 +1,4 @@
-package com.gamingfunserver.project.model;
+package com.gamingfunserver.project.model.user;
 
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
